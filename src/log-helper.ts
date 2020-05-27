@@ -22,7 +22,7 @@ export class LogHelper {
      * @param action {string} Action method currently in
      * @param inputs {object} Inputs to log
      */
-    public TraceInputs(action: string,
+    public LogInputs(action: string,
         inputs: object): void {
         this.Logger.Trace(`[${action}]-Inputs: ${JSON.stringify({ inputs })}`);
     }
@@ -32,7 +32,7 @@ export class LogHelper {
      * @param action {string} Action method currently in
      * @param inputs {object} Inputs to log
      */
-    public TraceResponse(action: string,
+    public LogResponse(action: string,
         response: object): void {
         this.Logger.Trace(`[${action}]-Response: ${JSON.stringify({ response })}`);
     }
@@ -42,7 +42,7 @@ export class LogHelper {
      * @param action {string} Action method currently in
      * @param inputs {object} Inputs to log
      */
-    public TraceRequest(action: string,
+    public LogRequest(action: string,
         request: object): void {
         this.Logger.Trace(`[${action}]-Request: ${JSON.stringify({ request })}`);
     }
