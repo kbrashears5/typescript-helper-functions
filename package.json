@@ -1,7 +1,7 @@
 {
     "name": "typescript-helper-functions",
     "version": "1.0.0",
-    "description": "Typescript Logger",
+    "description": "Typescript Helper Functions",
     "repository": {
         "type": "git",
         "url": "https://github.com/kbrashears5/typescript-helper-functions.git"
