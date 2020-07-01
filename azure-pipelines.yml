@@ -23,3 +23,4 @@ stages:
 - template: templates/build-node.yml@templates
   parameters:
     pack: true
+    test: true

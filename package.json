@@ -25,20 +25,33 @@
         "typescript-ilogger": "^1.0.1"
     },
     "devDependencies": {
-        "@types/node": "^14.0.5",
+        "@types/jest": "^26.0.3",
+        "@types/node": "^14.0.14",
+        "jest": "^26.1.0",
+        "jest-junit": "^11.0.1",
         "rimraf": "^3.0.2",
+        "ts-jest": "^26.1.1",
         "tslint": "^6.1.2",
-        "typescript": "^3.3.3"
+        "typescript": "^3.9.6"
     },
     "files": [
         "lib/**"
     ],
+    "jest": {
+        "preset": "ts-jest",
+        "reporters": [
+            "default",
+            "jest-junit"
+        ],
+        "rootDir": "src",
+        "testEnvironment": "node"
+    },
     "scripts": {
         "prebuild": "rimraf ./lib",
         "build": "./node_modules/.bin/tsc",
         "clean": "rimraf ./lib",
         "prepublishOnly": "npm run build",
         "postpublish": "npm run clean",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest --ci"
     }
 }
