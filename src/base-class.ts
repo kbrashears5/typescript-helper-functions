@@ -2,6 +2,9 @@ import { ILogger } from 'typescript-ilogger';
 import { LogHelper } from './log-helper';
 import { ObjectOperations } from './object-operations';
 
+/**
+ * Base class
+ */
 export class BaseClass {
 
     /**

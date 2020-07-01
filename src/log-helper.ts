@@ -10,7 +10,7 @@ export class LogHelper {
     public Logger: ILogger;
 
     /**
-     * Create new instance of LoggingHelper
+     * Create new instance of LogHelper
      * @param logger {ILogger} Logger
      */
     constructor(logger: ILogger) {
@@ -28,16 +28,6 @@ export class LogHelper {
     }
 
     /**
-     * Log the response to a SDK function call
-     * @param action {string} Action method currently in
-     * @param inputs {object} Inputs to log
-     */
-    public LogResponse(action: string,
-        response: object): void {
-        this.Logger.Trace(`[${action}]-Response: ${JSON.stringify({ response })}`);
-    }
-
-    /**
      * Log the request to a SDK function call
      * @param action {string} Action method currently in
      * @param inputs {object} Inputs to log
@@ -47,5 +37,13 @@ export class LogHelper {
         this.Logger.Trace(`[${action}]-Request: ${JSON.stringify({ request })}`);
     }
 
-
+    /**
+     * Log the response to a SDK function call
+     * @param action {string} Action method currently in
+     * @param inputs {object} Inputs to log
+     */
+    public LogResponse(action: string,
+        response: object): void {
+        this.Logger.Trace(`[${action}]-Response: ${JSON.stringify({ response })}`);
+    }
 }
