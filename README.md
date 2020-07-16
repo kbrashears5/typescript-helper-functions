@@ -42,3 +42,13 @@ const objectOperations = new ObjectOperations();
 
 logHelper.ToString(true);
 ```
+
+### Orchestrator
+Helper class to invoke operations on object types
+```javascript
+const logger = new Logger(LogLevel.Trace);
+
+const orchestrator = new Orchestrator(logger);
+
+orchestrator.Orchestrate(() => {console.log('function')});
+```
