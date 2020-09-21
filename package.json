@@ -22,18 +22,18 @@
     "main": "lib/index.js",
     "license": "MIT",
     "dependencies": {
-        "typescript-ilogger": "~1.0.23"
+        "typescript-ilogger": "~1.0.29"
     },
     "devDependencies": {
-        "@types/jest": "~26.0.13",
-        "@types/node": "~14.6.4",
+        "@types/jest": "~26.0.14",
+        "@types/node": "~14.11.1",
         "jest": "~26.4.2",
         "jest-junit": "~11.1.0",
         "npm-run-all": "~4.1.5",
         "rimraf": "~3.0.2",
-        "ts-jest": "~26.3.0",
+        "ts-jest": "~26.4.0",
         "tslint": "~6.1.3",
-        "typescript": "~4.0.2"
+        "typescript": "~4.0.3"
     },
     "files": [
         "lib/**"
