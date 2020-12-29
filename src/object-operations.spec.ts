@@ -60,6 +60,40 @@ describe(`${ObjectOperations.name}.${objectOperations.CloneObject.name}`, () => 
 });
 
 /**
+ * Test the ConvertArrayBufferToString method
+ */
+describe(`${ObjectOperations.name}.${objectOperations.ConvertArrayBufferToString.name}`, () => {
+    test('should throw - null source', () => {
+        const value = [] as any;
+        const result = () => objectOperations.ConvertArrayBufferToString(value);
+        return expect(result).toThrow();
+    });
+    test('should convert array buffer to string', () => {
+        const value = new Uint8Array([99, 111, 110, 118, 101, 114, 116, 105, 110, 103, 32, 97, 114, 114, 97, 121, 32, 98, 117, 102, 102, 101, 114, 32, 116, 111, 32, 115, 116, 114, 105, 110, 103]);
+        const actual = objectOperations.ConvertArrayBufferToString(value);
+        const expected = 'converting array buffer to string';
+        return expect(actual).toEqual(expected);
+    });
+});
+
+/**
+ * Test the ConvertStringToArrayBuffer method
+ */
+describe(`${ObjectOperations.name}.${objectOperations.ConvertStringToArrayBuffer.name}`, () => {
+    test('should throw - null source', () => {
+        const value = '';
+        const result = () => objectOperations.ConvertStringToArrayBuffer(value);
+        return expect(result).toThrow();
+    });
+    test('should convert string to array buffer', () => {
+        const value = 'converting string to array buffer';
+        const actual = objectOperations.ConvertStringToArrayBuffer(value);
+        const expected = new Uint8Array([99, 111, 110, 118, 101, 114, 116, 105, 110, 103, 32, 115, 116, 114, 105, 110, 103, 32, 116, 111, 32, 97, 114, 114, 97, 121, 32, 98, 117, 102, 102, 101, 114]);
+        return expect(actual).toEqual(expected);
+    });
+});
+
+/**
  * Test the CopyProperty method
  */
 describe(`${ObjectOperations.name}.${objectOperations.CopyProperty.name}`, () => {

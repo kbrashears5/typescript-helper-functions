@@ -5,6 +5,24 @@ import { AnyObject } from './any-object';
  */
 export class ObjectOperations {
     /**
+     * Text Decoder
+     */
+    private TextDecoder: TextDecoder;
+
+    /**
+     * Text Encoder
+     */
+    private TextEncoder: TextEncoder;
+
+    /**
+     * Create new instance of ObjectOperations
+     */
+    constructor() {
+        this.TextDecoder = new TextDecoder();
+        this.TextEncoder = new TextEncoder();
+    }
+
+    /**
      * Returns whether the two given objects are equal
      * @param object1 {object} - First object in the comparison
      * @param object2 {object} - Second object in the comparison
@@ -35,6 +53,26 @@ export class ObjectOperations {
         }
 
         return this.RemoveUndefinedElements<T>(result);
+    }
+
+    /**
+     * Convert a string to an array buffer
+     * @param value {string} - Value to encode
+     */
+    public ConvertArrayBufferToString(value: Uint8Array): string {
+        if (this.IsNullOrEmpty(value)) throw new Error(`Value cannot be null or undefined: [value]`);
+
+        return this.TextDecoder.decode(value);
+    }
+
+    /**
+     * Convert a string to an array buffer
+     * @param value {string} - Value to encode
+     */
+    public ConvertStringToArrayBuffer(value: string): Uint8Array {
+        if (this.IsNullOrWhitespace(value)) throw new Error(`Value cannot be null or undefined: [value]`);
+
+        return this.TextEncoder.encode(value);
     }
 
     /**
