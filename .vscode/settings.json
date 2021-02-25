@@ -1,8 +1,11 @@
 {
-    "cSpell.words": [
-        "cobertura",
-        "ilogger",
-        "postpublish",
-        "prebuild"
-    ]
+  "cSpell.words": [
+    "Parens",
+    "cobertura",
+    "eqeqeq",
+    "ilogger",
+    "paren",
+    "postpublish",
+    "prebuild"
+  ]
 }
