@@ -7,38 +7,37 @@ import { Orchestrator } from './orchestrator';
  * Base class
  */
 export class BaseClass {
+  /**
+   * Logger
+   */
+  public Logger: ILogger;
 
-    /**
-     * Logger
-     */
-    public Logger: ILogger;
+  /**
+   * Log Helper
+   */
+  public LogHelper: LogHelper;
 
-    /**
-     * Log Helper
-     */
-    public LogHelper: LogHelper;
+  /**
+   * Object Operations
+   */
+  public ObjectOperations: ObjectOperations;
 
-    /**
-     * Object Operations
-     */
-    public ObjectOperations: ObjectOperations;
+  /**
+   * Orchestrator
+   */
+  public Orchestrator: Orchestrator;
 
-    /**
-     * Orchestrator
-     */
-    public Orchestrator: Orchestrator;
+  /**
+   * Initialize new instance of BaseClass
+   * @param logger {ILogger} Logger
+   */
+  constructor(logger: ILogger) {
+    this.Logger = logger;
 
-    /**
-     * Initialize new instance of BaseClass
-     * @param logger {ILogger} Logger
-     */
-    constructor(logger: ILogger) {
-        this.Logger = logger;
+    this.LogHelper = new LogHelper(this.Logger);
 
-        this.LogHelper = new LogHelper(this.Logger);
+    this.ObjectOperations = new ObjectOperations();
 
-        this.ObjectOperations = new ObjectOperations();
-
-        this.Orchestrator = new Orchestrator(this.Logger);
-    }
+    this.Orchestrator = new Orchestrator(this.Logger);
+  }
 }
