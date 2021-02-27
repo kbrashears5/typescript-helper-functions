@@ -22,7 +22,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
-    "typescript-ilogger": "~1.0.57"
+    "typescript-ilogger": "~1.0.66"
   },
   "devDependencies": {
     "@types/jest": "~26.0.20",
@@ -68,8 +68,8 @@
     "update:typescript-ilogger": "npm i typescript-ilogger@latest",
     "update:types-jest": "npm i @types/jest@latest --save-dev",
     "update:types-node": "npm i @types/node@latest --save-dev",
-    "update:typescript-eslint-plugin": "npm i @typescript-eslint/eslint-plugin --save-dev",
-    "update:typescript-eslint-parser": "npm i @typescript-eslint/parser --save-dev",
+    "update:typescript-eslint-plugin": "npm i @typescript-eslint/eslint-plugin@latest --save-dev",
+    "update:typescript-eslint-parser": "npm i @typescript-eslint/parser@latest --save-dev",
     "update:eslint": "npm i eslint@latest --save-dev",
     "update:eslint-config-prettier": "npm i eslint-config-prettier@latest --save-dev",
     "update:eslint-config-standard": "npm i eslint-config-standard@latest --save-dev",
