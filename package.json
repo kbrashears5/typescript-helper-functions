@@ -22,25 +22,25 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
-    "typescript-ilogger": "~1.0.72"
+    "typescript-ilogger": "~1.0.86"
   },
   "devDependencies": {
-    "@types/jest": "~26.0.20",
-    "@types/node": "~14.14.34",
-    "@typescript-eslint/eslint-plugin": "~4.17.0",
-    "@typescript-eslint/parser": "~4.17.0",
-    "eslint": "~7.22.0",
-    "eslint-config-prettier": "~8.1.0",
+    "@types/jest": "~26.0.22",
+    "@types/node": "~14.14.41",
+    "@typescript-eslint/eslint-plugin": "~4.22.0",
+    "@typescript-eslint/parser": "~4.22.0",
+    "eslint": "~7.24.0",
+    "eslint-config-prettier": "~8.2.0",
     "eslint-config-standard": "~16.0.2",
-    "eslint-plugin-prettier": "~3.3.1",
+    "eslint-plugin-prettier": "~3.4.0",
     "eslint-plugin-standard": "~5.0.0",
     "jest": "~26.6.3",
     "jest-junit": "~12.0.0",
     "npm-run-all": "~4.1.5",
     "prettier": "~2.2.1",
     "rimraf": "~3.0.2",
-    "ts-jest": "~26.5.3",
-    "typescript": "~4.2.3"
+    "ts-jest": "~26.5.5",
+    "typescript": "~4.2.4"
   },
   "files": [
     "lib/**"
