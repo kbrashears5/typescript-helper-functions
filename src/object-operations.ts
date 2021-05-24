@@ -1,3 +1,5 @@
+/* eslint-disable no-undefined */
+/* eslint-disable no-prototype-builtins */
 import { AnyObject } from './any-object';
 
 /**
@@ -29,8 +31,8 @@ export class ObjectOperations {
    * @param excludeList {string[]} - List of property names to exclude during the comparison
    */
   public AreObjectsEqual(
-    object1: object,
-    object2: object,
+    object1: any,
+    object2: any,
     ...excludeList: string[]
   ): boolean {
     const excludes = excludeList || [];
@@ -72,8 +74,9 @@ export class ObjectOperations {
    * @param value {string} - Value to encode
    */
   public ConvertArrayBufferToString(value: Uint8Array): string {
-    if (this.IsNullOrEmpty(value))
+    if (this.IsNullOrEmpty(value)) {
       throw new Error(`Value cannot be null or undefined: [value]`);
+    }
 
     return this.TextDecoder.decode(value);
   }
@@ -83,8 +86,9 @@ export class ObjectOperations {
    * @param value {string} - Value to encode
    */
   public ConvertStringToArrayBuffer(value: string): Uint8Array {
-    if (this.IsNullOrWhitespace(value))
+    if (this.IsNullOrWhitespace(value)) {
       throw new Error(`Value cannot be null or undefined: [value]`);
+    }
 
     return this.TextEncoder.encode(value);
   }
@@ -100,14 +104,17 @@ export class ObjectOperations {
     source: any,
     target: any,
     propertyName: string,
-    append: boolean = false,
+    append = false,
   ) {
-    if (this.IsNullOrEmpty(source))
+    if (this.IsNullOrEmpty(source)) {
       throw new Error(`Value cannot be null or undefined: [source]`);
-    if (this.IsNullOrEmpty(target))
+    }
+    if (this.IsNullOrEmpty(target)) {
       throw new Error(`Value cannot be null or undefined: [target]`);
-    if (this.IsNullOrWhitespace(propertyName))
+    }
+    if (this.IsNullOrWhitespace(propertyName)) {
       throw new Error(`Value cannot be null or undefined: [propertyName]`);
+    }
 
     if (!source.hasOwnProperty(propertyName)) {
       return;
@@ -129,8 +136,9 @@ export class ObjectOperations {
     propertyName: string,
     defaultValue?: T,
   ): T | undefined {
-    if (this.IsNullOrEmpty(source))
+    if (this.IsNullOrEmpty(source)) {
       throw new Error(`Value cannot be null or undefined: [source]`);
+    }
     if (this.IsNullOrWhitespace(propertyName)) {
       return defaultValue;
     }
@@ -150,13 +158,17 @@ export class ObjectOperations {
    * @param value {string} - Value
    */
   public IsMatch(pattern: string, value: string) {
-    if (this.IsNullOrWhitespace(pattern))
+    if (this.IsNullOrWhitespace(pattern)) {
       throw new Error(`Value cannot be null or undefined: [pattern]`);
-    if (this.IsNullOrWhitespace(value))
+    }
+    if (this.IsNullOrWhitespace(value)) {
       throw new Error(`Value cannot be null or undefined: [value]`);
+    }
 
+    // eslint-disable-next-line no-param-reassign
     pattern = pattern.toUpperCase();
 
+    // eslint-disable-next-line no-param-reassign
     value = value.toUpperCase();
 
     if (pattern === '*') {
@@ -182,16 +194,20 @@ export class ObjectOperations {
    * Determines whether or not the given value is null or empty
    * @param value {object | string | undefined | null} Value to check if null or empty
    */
-  public IsNullOrEmpty(value: object | string | undefined | null): boolean {
+  // eslint-disable-next-line class-methods-use-this
+  public IsNullOrEmpty(value: any | string | undefined | null): boolean {
     switch (typeof value) {
-      case 'object':
-        const o: object = value || {};
+      case 'object': {
+        const o: any = value || {};
         return Object.keys(o).length === 0;
-      case 'string':
+      }
+      case 'string': {
         const s: string = value || '';
         return s.length < 1;
-      default:
+      }
+      default: {
         return true;
+      }
     }
   }
 
@@ -214,12 +230,15 @@ export class ObjectOperations {
     item2: any,
     propertyName: string,
   ): boolean {
-    if (this.IsNullOrEmpty(item1))
+    if (this.IsNullOrEmpty(item1)) {
       throw new Error(`Value cannot be null or undefined: [item1]`);
-    if (this.IsNullOrEmpty(item2))
+    }
+    if (this.IsNullOrEmpty(item2)) {
       throw new Error(`Value cannot be null or undefined: [item2]`);
-    if (this.IsNullOrWhitespace(propertyName))
+    }
+    if (this.IsNullOrWhitespace(propertyName)) {
       throw new Error(`Value cannot be null or undefined: [propertyName]`);
+    }
 
     const oldValue = item1[propertyName];
 
@@ -291,6 +310,7 @@ export class ObjectOperations {
    * Returns a new object based on the given source omitting undefined values
    * @param source {T} - Source object
    */
+  // eslint-disable-next-line class-methods-use-this
   public RemoveUndefinedElements<T extends AnyObject>(source: T): T {
     const result = Object.assign({}, source);
 
@@ -315,11 +335,13 @@ export class ObjectOperations {
     target: any,
     propertyName?: string,
     value?: any,
-    append: boolean = true,
+    append = true,
   ) {
-    if (this.IsNullOrEmpty(target))
+    if (this.IsNullOrEmpty(target)) {
       throw new Error(`Value cannot be null or undefined: [target]`);
+    }
 
+    // eslint-disable-next-line no-param-reassign
     propertyName = propertyName || '';
 
     if (this.IsNullOrWhitespace(propertyName)) {
@@ -335,6 +357,7 @@ export class ObjectOperations {
    * Converts to string
    * @param value {any} Value to convert to string
    */
+  // eslint-disable-next-line class-methods-use-this
   public ToString(value: any): string {
     switch (typeof value) {
       case 'boolean':

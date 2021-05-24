@@ -1,3 +1,4 @@
+/* eslint-disable no-undefined */
 import { ObjectOperations } from './object-operations';
 
 const objectOperations = new ObjectOperations();

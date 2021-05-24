@@ -24,5 +24,6 @@ export abstract class BaseMock {
   /**
    * Function to create the mock objects
    */
+  // eslint-disable-next-line no-unused-vars
   protected abstract CreateMock(returnError: boolean): any;
 }
