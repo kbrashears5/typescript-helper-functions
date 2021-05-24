@@ -71,7 +71,7 @@
     "update:typescript-eslint-parser": "npm i @typescript-eslint/parser@latest --save-dev",
     "update:eslint": "npm i eslint@latest --save-dev",
     "update:eslint-config-prettier": "npm i eslint-config-prettier@latest --save-dev",
-    "update:eslint-plugin-jest": "npm i eslint-config-jest@latest --save-dev",
+    "update:eslint-plugin-jest": "npm i eslint-plugin-jest@latest --save-dev",
     "update:eslint-plugin-prettier": "npm i eslint-plugin-prettier@latest --save-dev",
     "update:jest": "npm i jest@latest --save-dev",
     "update:jest-junit": "npm i jest-junit@latest --save-dev",
