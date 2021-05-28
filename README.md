@@ -4,9 +4,7 @@
     
 <b>Helper functions for Typescript</b>
     
-[![Build Status](https://dev.azure.com/kbrashears5/github/_apis/build/status/kbrashears5.typescript-helper-functions?branchName=master)](https://dev.azure.com/kbrashears5/github/_build/latest?definitionId=9&branchName=master)
-[![Tests](https://img.shields.io/azure-devops/tests/kbrashears5/github/9)](https://img.shields.io/azure-devops/tests/kbrashears5/github/9)
-[![Code Coverage](https://img.shields.io/azure-devops/coverage/kbrashears5/github/9)](https://img.shields.io/azure-devops/coverage/kbrashears5/github/9)
+[![CI/CD](https://github.com/kbrashears5/typescript-helper-functions/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kbrashears5/typescript-helper-functions/actions/workflows/ci-cd.yml)
 
 [![npm](https://img.shields.io/npm/v/typescript-helper-functions)](https://img.shields.io/npm/v/typescript-helper-functions)
 [![npm](https://img.shields.io/npm/dt/typescript-helper-functions)](https://img.shields.io/npm/dt/typescript-helper-functions)
@@ -64,3 +62,13 @@ orchestrator.Orchestrate(() => {
   console.log('function');
 });
 ```
+
+## Development
+
+Clone the latest and run
+
+```npm
+npm run prep
+```
+
+to install packages and prep the git hooks

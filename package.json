@@ -1,6 +1,6 @@
 {
   "name": "typescript-helper-functions",
-  "version": "1.0.150",
+  "version": "1.0.151",
   "description": "Typescript Helper Functions",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
-    "typescript-ilogger": "~1.0.104"
+    "typescript-ilogger": "~1.0.106"
   },
   "devDependencies": {
     "@types/jest": "~26.0.23",
@@ -62,8 +62,8 @@
     "clean": "rimraf ./lib",
     "format": "prettier --write .",
     "lint": "eslint -c .eslintrc.yml \"*/**\"",
-    "postinstall": "node-git-hooks",
     "prebuild": "npm run clean && npm run format && npm run lint",
+    "prep": "npm run update && node-git-hooks",
     "test": "jest --ci --coverage",
     "update:eslint-config-prettier": "npm i eslint-config-prettier@latest --save-dev",
     "update:eslint-plugin-jest": "npm i eslint-plugin-jest@latest --save-dev",
@@ -82,6 +82,6 @@
     "update:typescript-eslint-plugin": "npm i @typescript-eslint/eslint-plugin@latest --save-dev",
     "update:typescript-ilogger": "npm i typescript-ilogger@latest",
     "update:typescript": "npm i typescript@latest --save-dev",
-    "update": "run-s update:* && npm run postinstall"
+    "update": "run-s update:*"
   }
 }
