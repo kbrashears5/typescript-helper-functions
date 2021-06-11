@@ -1,6 +1,6 @@
 {
   "name": "typescript-helper-functions",
-  "version": "1.0.152",
+  "version": "1.0.153",
   "description": "Typescript Helper Functions",
   "repository": {
     "type": "git",
@@ -22,24 +22,24 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
-    "typescript-ilogger": "~1.0.107"
+    "typescript-ilogger": "~1.0.108"
   },
   "devDependencies": {
     "@types/jest": "~26.0.23",
-    "@types/node": "~15.12.0",
-    "@typescript-eslint/eslint-plugin": "~4.26.0",
-    "@typescript-eslint/parser": "~4.26.0",
-    "eslint": "~7.27.0",
+    "@types/node": "~15.12.2",
+    "@typescript-eslint/eslint-plugin": "~4.26.1",
+    "@typescript-eslint/parser": "~4.26.1",
+    "eslint": "~7.28.0",
     "eslint-config-prettier": "~8.3.0",
     "eslint-plugin-jest": "~24.3.6",
     "eslint-plugin-prettier": "~3.4.0",
     "jest": "~27.0.4",
-    "jest-junit": "~12.1.0",
+    "jest-junit": "~12.2.0",
     "node-git-hooks": "~1.0.6",
     "npm-run-all": "~4.1.5",
-    "prettier": "~2.3.0",
+    "prettier": "~2.3.1",
     "rimraf": "~3.0.2",
-    "ts-jest": "~27.0.2",
+    "ts-jest": "~27.0.3",
     "typescript": "~4.3.2"
   },
   "files": [
