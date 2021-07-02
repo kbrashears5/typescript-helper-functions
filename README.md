@@ -5,7 +5,7 @@
 <b>Helper functions for Typescript</b>
     
 [![CI/CD](https://github.com/kbrashears5/typescript-helper-functions/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kbrashears5/typescript-helper-functions/actions/workflows/ci-cd.yml)
-
+[![codecov](https://codecov.io/gh/kbrashears5/typescript-helper-functions/branch/master/graph/badge.svg?token=2CVWSV7X7L)](https://codecov.io/gh/kbrashears5/typescript-helper-functions)
 [![npm](https://img.shields.io/npm/v/typescript-helper-functions)](https://img.shields.io/npm/v/typescript-helper-functions)
 [![npm](https://img.shields.io/npm/dt/typescript-helper-functions)](https://img.shields.io/npm/dt/typescript-helper-functions)
 

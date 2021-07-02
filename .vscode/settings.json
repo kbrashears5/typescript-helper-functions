@@ -4,6 +4,7 @@
     "Parens",
     "builtins",
     "cobertura",
+    "codecov",
     "codeql",
     "eqeqeq",
     "ilogger",
