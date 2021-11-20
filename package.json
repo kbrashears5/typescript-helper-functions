@@ -1,6 +1,6 @@
 {
   "name": "typescript-helper-functions",
-  "version": "1.0.155",
+  "version": "1.0.156",
   "description": "Typescript Helper Functions",
   "repository": {
     "type": "git",
@@ -22,25 +22,25 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
-    "typescript-ilogger": "~1.0.110"
+    "typescript-ilogger": "~1.0.111"
   },
   "devDependencies": {
-    "@types/jest": "~27.0.1",
-    "@types/node": "~16.6.2",
-    "@typescript-eslint/eslint-plugin": "~4.29.2",
-    "@typescript-eslint/parser": "~4.29.2",
-    "eslint": "~7.32.0",
+    "@types/jest": "~27.0.3",
+    "@types/node": "~16.11.9",
+    "@typescript-eslint/eslint-plugin": "~5.4.0",
+    "@typescript-eslint/parser": "~5.4.0",
+    "eslint": "~8.2.0",
     "eslint-config-prettier": "~8.3.0",
-    "eslint-plugin-jest": "~24.4.0",
-    "eslint-plugin-prettier": "~3.4.0",
-    "jest": "~27.0.6",
-    "jest-junit": "~12.2.0",
+    "eslint-plugin-jest": "~25.2.4",
+    "eslint-plugin-prettier": "~4.0.0",
+    "jest": "~27.3.1",
+    "jest-junit": "~13.0.0",
     "node-git-hooks": "~1.0.6",
     "npm-run-all": "~4.1.5",
-    "prettier": "~2.3.2",
+    "prettier": "~2.4.1",
     "rimraf": "~3.0.2",
-    "ts-jest": "~27.0.5",
-    "typescript": "~4.3.5"
+    "ts-jest": "~27.0.7",
+    "typescript": "~4.5.2"
   },
   "files": [
     "lib/**"
